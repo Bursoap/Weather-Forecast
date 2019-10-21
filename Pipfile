@@ -10,6 +10,9 @@ flask = "*"
 flask-script = "*"
 flask-migrate = "*"
 flask-sqlalchemy = "*"
+python-dotenv = "*"
+psycopg2-binary = "*"
+ipython = "*"
 
 [requires]
 python_version = "3.7"
