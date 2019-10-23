@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 81c90942e1b8
+Revision ID: aafa879869d4
 Revises: 
-Create Date: 2019-10-22 17:15:30.494023
+Create Date: 2019-10-23 15:30:57.576290
 
 """
 import json
@@ -15,7 +15,7 @@ from sqlalchemy import table, column, Integer, String, Numeric
 
 # revision identifiers, used by Alembic.
 
-revision = '81c90942e1b8'
+revision = 'aafa879869d4'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -49,6 +49,7 @@ def upgrade():
     sa.Column('wind_degrees', sa.Integer(), nullable=True),
     sa.Column('rain_mm', sa.Integer(), nullable=True),
     sa.Column('snow_mm', sa.Integer(), nullable=True),
+    sa.ForeignKeyConstraint(['city_id'], ['city.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
     data_upgrades()

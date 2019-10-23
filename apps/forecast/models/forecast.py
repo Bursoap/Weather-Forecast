@@ -5,7 +5,7 @@ db = DatabaseManager.db
 
 class Forecast(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    city_id = db.Column(db.Integer, nullable=False)
+    city_id = db.Column(db.Integer, db.ForeignKey('city.id'), nullable=False)
     city = db.relationship('City', backref='forecasts')
 
     forecast_date = db.Column(db.DateTime, nullable=False)
