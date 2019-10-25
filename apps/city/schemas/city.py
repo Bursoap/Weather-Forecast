@@ -9,7 +9,7 @@ class CitySchema(ma.ModelSchema):
 
     class Meta:
         model = City
-        exclude = ('id', )
+        dump_only = ('id', )
         unknown = 'EXCLUDE'
         sqla_session = db.session
 

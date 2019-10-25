@@ -15,6 +15,7 @@ psycopg2-binary = "*"
 ipython = "*"
 flask-marshmallow = "*"
 marshmallow-sqlalchemy = "*"
+flask-restful = "*"
 
 [requires]
 python_version = "3.7"
