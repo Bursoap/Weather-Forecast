@@ -1,12 +1,12 @@
 from flask import Blueprint
 from flask_restful import Api
 
-city_blueprint = Blueprint(
-    'city',
+city_api_blueprint = Blueprint(
+    'city_api',
     __name__,
     url_prefix='/api/city/'
 )
 
-api = Api(city_blueprint)
-from .routes import register_routes
-register_routes(api)
+api = Api(city_api_blueprint)
+from .routes import register_api_routes
+register_api_routes(api)
