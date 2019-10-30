@@ -16,6 +16,8 @@ ipython = "*"
 flask-marshmallow = "*"
 marshmallow-sqlalchemy = "*"
 flask-restful = "*"
+marshmallow-form = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"
