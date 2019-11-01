@@ -2,6 +2,7 @@ version: '3'
 
 services:
   db:
+    container_name: mongo
     restart: always
     image: mongo:latest
     volumes:
@@ -12,6 +13,7 @@ services:
       - "27017-27019:27017-27019"
 
   flask:
+    container_name: flask
     build:
       context: .
       dockerfile: Dockerfile
