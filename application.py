@@ -2,10 +2,9 @@ import os
 
 from flask import Flask
 from dotenv import load_dotenv
-from flask_migrate import MigrateCommand, Migrate
 from flask_script import Manager, Server
 
-from managers import DatabaseManager, MarshmallowManager, ApplicationManager
+from managers import DatabaseManager, ApplicationManager
 
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__name__), '.env'))
 
@@ -21,13 +20,10 @@ def create_app(app_name):
 
 app = create_app('Weather Forecast')
 db = DatabaseManager.setup_db(app)
-ma = MarshmallowManager.setup_ma(app)
 
 ApplicationManager.register_applications(app)
-migrate = Migrate(app, db)
 
 manager = Manager(app)
-manager.add_command('db', MigrateCommand)
 manager.add_command('runserver', Server(host=app.config['HOST'],
                                         port=app.config['PORT']))
 

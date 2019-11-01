@@ -3,8 +3,6 @@ import datetime
 
 import requests
 
-from apps.forecast.schemas.forecast import forecast_schema
-
 
 def flatten(d):
     out = {}
@@ -26,7 +24,6 @@ class CreateForecastService:
     def create_forecast(self, city_id):
         response = self.make_request(city_id)
         forecast_dicts = self.extract_forecast_dicts(response)
-        forecasts = forecast_schema.load(forecast_dicts, many=True)
         return
 
     def make_request(self, city_id):

@@ -8,16 +8,11 @@ verify_ssl = true
 [packages]
 flask = "*"
 flask-script = "*"
-flask-migrate = "*"
-flask-sqlalchemy = "*"
 python-dotenv = "*"
-psycopg2-binary = "*"
 ipython = "*"
-flask-marshmallow = "*"
-marshmallow-sqlalchemy = "*"
 flask-restful = "*"
-marshmallow-form = "*"
 requests = "*"
+flask-pymongo = "*"
 
 [requires]
 python_version = "3.7"

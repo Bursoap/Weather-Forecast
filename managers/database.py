@@ -1,4 +1,4 @@
-from flask_sqlalchemy import SQLAlchemy
+from flask_pymongo import PyMongo
 
 
 class DatabaseManager:
@@ -6,5 +6,5 @@ class DatabaseManager:
 
     @classmethod
     def setup_db(cls, app):
-        cls.db = SQLAlchemy(app)
+        cls.db = PyMongo(app)
         return cls.db
