@@ -1,2 +1,3 @@
 #!/bin/sh
-python application.py runserver
+
+uwsgi --ini deploy/uwsgi/uwsgi.ini
